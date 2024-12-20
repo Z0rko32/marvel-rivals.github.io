@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Discord } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -35,14 +36,20 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4 mb-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+              <a href="https://www.facebook.com/marvelrivals" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
                 <Facebook size={24} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+              <a href="https://twitter.com/MarvelRivals" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
                 <Twitter size={24} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+              <a href="https://www.instagram.com/marvelrivals/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
                 <Instagram size={24} />
+              </a>
+              <a href="https://discord.gg/marvelrivals" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <Discord size={24} />
+              </a>
+              <a href="https://www.youtube.com/@MarvelRivals" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <Youtube size={24} />
               </a>
             </div>
             <ul className="space-y-2">

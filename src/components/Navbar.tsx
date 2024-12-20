@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +38,8 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -46,6 +51,29 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
+            
+            {/* Desktop Hamburger Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <button className="p-2 rounded-md text-white hover:text-marvel-red focus:outline-none">
+                  <Menu size={24} />
+                </button>
+              </SheetTrigger>
+              <SheetContent>
+                <div className="flex flex-col space-y-4 mt-8">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.path}
+                      className="text-lg font-medium hover:text-marvel-red transition-colors"
+                      onClick={handleNavClick}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
           
           {/* Mobile menu button */}

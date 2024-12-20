@@ -44,7 +44,7 @@ const Index = () => {
             {[
               {
                 title: "Epic Battles",
-                description: "Engage in thrilling 3v3 team battles with unique objectives",
+                description: "Engage in thrilling 6v6 team battles with unique objectives",
               },
               {
                 title: "Iconic Heroes",
@@ -88,8 +88,8 @@ const Index = () => {
                 description: "Discover the latest addition to our hero roster!",
               },
               {
-                title: "Season 2 Update",
-                date: "March 10, 2024",
+                title: "Season 0 Update",
+                date: "December 6, 2024",
                 description: "New maps, modes, and balance changes coming soon.",
               },
               {
@@ -108,9 +108,14 @@ const Index = () => {
                     {news.title}
                   </h3>
                   <p className="text-gray-600">{news.description}</p>
-                  <button className="mt-4 text-marvel-red font-semibold hover:text-red-700 transition-colors">
+                  <a 
+                    href="https://www.marvelrivals.com/news/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="mt-4 text-marvel-red font-semibold hover:text-red-700 transition-colors inline-block"
+                  >
                     Read More →
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
