@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -7,24 +9,28 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-16 bg-marvel-blue text-white">
+      <section id="home" className="pt-16 bg-marvel-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 typing-animation relative">
               Welcome to <span className="text-marvel-red">Marvel Rivals</span>
+              <span className="cursor"></span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Join the ultimate battle arena where heroes and villains collide!
             </p>
-            <button className="bg-marvel-red text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
+            <Button 
+              className="bg-marvel-red hover:bg-red-700 hover:scale-105 transform transition-all duration-200 text-white px-8 py-6 rounded-lg text-lg font-semibold"
+              onClick={() => window.open('https://store.steampowered.com/app/2767030/Marvel_Rivals/', '_blank')}
+            >
               Play Now
-            </button>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-24">
+      <section id="about" className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-marvel-blue mb-4">
@@ -64,7 +70,7 @@ const Index = () => {
       </section>
 
       {/* News Section */}
-      <section className="bg-marvel-gray py-24">
+      <section id="news" className="bg-marvel-gray py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-marvel-blue mb-4">
@@ -108,6 +114,48 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Shop Section */}
+      <section id="shop" className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-marvel-blue mb-4">
+              Shop
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Get exclusive in-game items and merchandise
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-marvel-gray py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-marvel-blue mb-4">
+              Contact Us
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Get in touch with our support team
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-marvel-blue mb-4">
+              FAQ
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Frequently Asked Questions
+            </p>
           </div>
         </div>
       </section>

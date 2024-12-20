@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,24 +16,35 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <a href="#about" className="text-gray-400 hover:text-marvel-red transition-colors">
                   About Game
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/news" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <a href="#news" className="text-gray-400 hover:text-marvel-red transition-colors">
                   News
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/shop" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <a href="#shop" className="text-gray-400 hover:text-marvel-red transition-colors">
                   Shop
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Legal</h3>
+            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <div className="flex space-x-4 mb-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <Facebook size={24} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <Twitter size={24} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-marvel-red transition-colors">
+                <Instagram size={24} />
+              </a>
+            </div>
             <ul className="space-y-2">
               <li>
                 <Link to="/privacy" className="text-gray-400 hover:text-marvel-red transition-colors">
@@ -42,11 +54,6 @@ const Footer = () => {
               <li>
                 <Link to="/terms" className="text-gray-400 hover:text-marvel-red transition-colors">
                   Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-marvel-red transition-colors">
-                  Contact Us
                 </Link>
               </li>
             </ul>
